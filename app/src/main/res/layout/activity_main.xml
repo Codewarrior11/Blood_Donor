@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#212121"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/view1"
+        android:onClick="findDonor"
+        android:layout_width="100dp"
+        android:layout_height="110dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/view2"
+        android:layout_marginStart="21dp"
+        android:background="@drawable/custom_ripple"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/findDonor"
+            android:layout_width="match_parent"
+            android:layout_height="69dp"
+            android:padding="5dp"
+            android:scaleType="center"
+            android:src="@drawable/find_donor" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:gravity="center"
+            android:text="Find Donor" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/view2"
+        android:onClick="postRequ"
+        android:layout_width="100dp"
+        android:layout_height="110dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="206dp"
+        android:background="@drawable/custom_ripple"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/requestDonor"
+
+            android:layout_width="match_parent"
+            android:layout_height="69dp"
+            android:padding="5dp"
+            android:scaleType="center"
+            android:src="@drawable/request" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:text="Post Req." />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/view3"
+        android:onClick="addDonor"
+        android:layout_width="100dp"
+        android:layout_height="110dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/view2"
+        android:layout_marginEnd="17dp"
+        android:background="@drawable/custom_ripple"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/addDonor"
+
+            android:layout_width="match_parent"
+            android:layout_height="69dp"
+            android:padding="5dp"
+            android:scaleType="center"
+            android:src="@drawable/add_donor" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:text="Add Donor" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/view4"
+        android:onClick="myAccount"
+        android:layout_width="100dp"
+        android:layout_height="110dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/view1"
+        android:layout_marginBottom="117dp"
+        android:background="@drawable/custom_ripple"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/signupDonor"
+            android:layout_width="match_parent"
+            android:layout_height="69dp"
+            android:padding="5dp"
+            android:scaleType="center"
+            android:src="@drawable/account" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:gravity="center"
+            android:text="My Account" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/view5"
+        android:onClick="information"
+        android:layout_width="100dp"
+        android:layout_height="110dp"
+        android:layout_alignTop="@+id/view4"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/custom_ripple"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/accountDonor"
+
+            android:layout_width="match_parent"
+            android:layout_height="69dp"
+            android:padding="5dp"
+            android:scaleType="center"
+            android:src="@drawable/info" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:text="Information" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/view6"
+        android:onClick="aboutUs"
+        android:layout_width="100dp"
+        android:layout_height="110dp"
+        android:layout_alignStart="@+id/view3"
+        android:layout_alignTop="@+id/view4"
+        android:background="@drawable/custom_ripple"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/about"
+
+            android:layout_width="match_parent"
+            android:layout_height="69dp"
+            android:padding="5dp"
+            android:scaleType="center"
+            android:src="@drawable/about" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:gravity="center"
+            android:text="About Us" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tittle"
+        android:layout_width="207dp"
+        android:layout_height="37dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="39dp"
+        android:gravity="center"
+        android:text="BLOOD DONOR"
+        android:textColor="#0ee9c1"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="84dp"
+        app:srcCompat="@drawable/heart" />
+
+    <TextView
+        android:id="@+id/subtitle"
+        android:fontFamily="cursive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="35dp"
+        android:textColor="#0ee9c1"
+        android:textSize="22dp"
+        android:text="“There is no great joy than saving a soul.”" />
+
+</RelativeLayout>
