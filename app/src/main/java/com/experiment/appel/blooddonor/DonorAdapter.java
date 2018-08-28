@@ -29,15 +29,30 @@ public class DonorAdapter extends ArrayAdapter<Donor>{
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         Donor donor=donors.get(position);
-        convertView= LayoutInflater.from(context).inflate(R.layout.donor_view,parent,false);
-        TextView bloodgroup=convertView.findViewById(R.id.blood_group);
-        TextView name=convertView.findViewById(R.id.donorname);
-        TextView address=convertView.findViewById(R.id.donoraddress);
 
-        bloodgroup.setText(donor.getBloodGroup());
-        name.setText(donor.getName());
-        address.setText(donor.getAddress());
+        ViewHolder viewHolder;
+        if (convertView==null) {
+            viewHolder=new ViewHolder();
+            convertView = LayoutInflater.from(context).inflate(R.layout.donor_view, parent, false);
+            viewHolder.bloodgroup = convertView.findViewById(R.id.blood_group);
+            viewHolder.name = convertView.findViewById(R.id.donorname);
+            viewHolder.address = convertView.findViewById(R.id.donoraddress);
+            convertView.setTag(viewHolder);
+
+        }
+        else
+        {
+            viewHolder=(ViewHolder)convertView.getTag();
+        }
+
+        viewHolder.bloodgroup.setText(donor.getBloodGroup());
+        viewHolder.name.setText(donor.getName());
+        viewHolder.address.setText(donor.getAddress());
 
         return convertView;
+    }
+
+    private static class ViewHolder{
+        TextView bloodgroup,name,address;
     }
 }
