@@ -10,25 +10,29 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
 
 public class DonorAdapter extends ArrayAdapter<Donor>{
 
     private Context context;
     private ArrayList<Donor>donors;
+    private List<Donor> dnl;
 
 
-    public DonorAdapter(@NonNull Context context,@NonNull ArrayList<Donor> donor) {
-        super(context, R.layout.donor_view, donor);
-
+    public DonorAdapter(@NonNull Context context,@NonNull ArrayList<Donor> donors) {
+        super(context, R.layout.donor_view, donors);
+        this.dnl=donors;
         this.context=context;
-        this.donors=donor;
+        this.donors=new ArrayList<Donor>();
+        this.donors.addAll(dnl);
     }
 
 
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        Donor donor=donors.get(position);
+        Donor donor=dnl.get(position);
 
         ViewHolder viewHolder;
         if (convertView==null) {
@@ -54,5 +58,22 @@ public class DonorAdapter extends ArrayAdapter<Donor>{
 
     private static class ViewHolder{
         TextView bloodgroup,name,address;
+    }
+
+    public void filter(String charText) {
+        charText = charText.toLowerCase(Locale.getDefault());
+        dnl.clear();
+        if (charText.length() == 0) {
+            dnl.addAll(donors);
+        } else {
+            for (Donor wp : donors) {
+                if (wp.getBloodGroup().toLowerCase(Locale.getDefault())
+                        .contains(charText) ||wp.getAddress().toLowerCase(Locale.getDefault())
+                        .contains(charText)) {
+                    dnl.add(wp);
+                }
+            }
+        }
+        notifyDataSetChanged();
     }
 }
