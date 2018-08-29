@@ -9,38 +9,33 @@ import android.widget.Button;
 import android.widget.Toast;
 
 public class Account extends AppCompatActivity {
-    Button call,update,delete,email;
+    Button callbtn;
+    Button updateBtn;
+    Button deleteBtn;
+    Button emailBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profile_view);
 
-        call=findViewById(R.id.call);
-        update=findViewById(R.id.updateBtn);
-        delete=findViewById(R.id.deleteBtn);
+        callbtn=findViewById(R.id.callBtn);
+        updateBtn=findViewById(R.id.updateBtn);
+        deleteBtn=findViewById(R.id.deleteBtn);
+        emailBtn=findViewById(R.id.emailBtn);
 
-        final int position=Integer.parseInt(getIntent().getStringExtra("position"));
         final String phoneNumber=getIntent().getStringExtra("phone");
+        final int position=getIntent().getIntExtra("position",1);
 
-        call.setOnClickListener(new View.OnClickListener() {
+        callbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + phoneNumber));
+                Intent intent=new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + phoneNumber));
                 startActivity(intent);
             }
         });
 
-        update.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(Account.this,""+position,Toast.LENGTH_SHORT).show();
-            }
-        });
-
-        delete.setOnClickListener(new View.OnClickListener() {
+        updateBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(Account.this,""+position,Toast.LENGTH_SHORT).show();

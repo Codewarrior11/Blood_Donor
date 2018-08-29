@@ -48,7 +48,7 @@ public class DonorAdapter extends ArrayAdapter<Donor>{
             viewHolder.name = convertView.findViewById(R.id.donorname);
             viewHolder.address = convertView.findViewById(R.id.donoraddress);
             viewHolder.call=convertView.findViewById(R.id.call);
-            viewHolder.profileView=convertView.findViewById(R.id.accountDonor);
+            viewHolder.profileView=convertView.findViewById(R.id.viewfullprofile);
             convertView.setTag(viewHolder);
 
         }
