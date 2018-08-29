@@ -1,12 +1,15 @@
 package com.experiment.appel.blooddonor;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -32,7 +35,7 @@ public class DonorAdapter extends ArrayAdapter<Donor>{
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        Donor donor=dnl.get(position);
+        final Donor donor=dnl.get(position);
 
         ViewHolder viewHolder;
         if (convertView==null) {
@@ -41,6 +44,8 @@ public class DonorAdapter extends ArrayAdapter<Donor>{
             viewHolder.bloodgroup = convertView.findViewById(R.id.blood_group);
             viewHolder.name = convertView.findViewById(R.id.donorname);
             viewHolder.address = convertView.findViewById(R.id.donoraddress);
+            viewHolder.call=convertView.findViewById(R.id.call);
+            viewHolder.profileView=convertView.findViewById(R.id.accountDonor);
             convertView.setTag(viewHolder);
 
         }
@@ -52,12 +57,20 @@ public class DonorAdapter extends ArrayAdapter<Donor>{
         viewHolder.bloodgroup.setText(donor.getBloodGroup());
         viewHolder.name.setText(donor.getName());
         viewHolder.address.setText(donor.getAddress());
+        viewHolder.call.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + donor.getPhoneNumber()));
+                context.startActivity(intent);
+            }
+        });
 
         return convertView;
     }
 
     private static class ViewHolder{
         TextView bloodgroup,name,address;
+        Button call,profileView;
     }
 
     public void filter(String charText) {
@@ -66,11 +79,11 @@ public class DonorAdapter extends ArrayAdapter<Donor>{
         if (charText.length() == 0) {
             dnl.addAll(donors);
         } else {
-            for (Donor wp : donors) {
-                if (wp.getBloodGroup().toLowerCase(Locale.getDefault())
-                        .contains(charText) ||wp.getAddress().toLowerCase(Locale.getDefault())
+            for (Donor dn : donors) {
+                if (dn.getBloodGroup().toLowerCase(Locale.getDefault())
+                        .contains(charText) ||dn.getAddress().toLowerCase(Locale.getDefault())
                         .contains(charText)) {
-                    dnl.add(wp);
+                    dnl.add(dn);
                 }
             }
         }
