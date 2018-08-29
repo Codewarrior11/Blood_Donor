@@ -1,8 +1,11 @@
 package com.experiment.appel.blooddonor;
 
 import android.Manifest;
+import android.app.Dialog;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -25,7 +28,7 @@ import static android.content.Intent.*;
 
 public class FindDonor extends AppCompatActivity {
     ListView listView;
-    Button callButton;
+
     DonorAdapter donorAdapter;
 
 

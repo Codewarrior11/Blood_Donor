@@ -3,4 +3,44 @@
     <string name="about">Blood Donor management app mainly developed to manage the donor list of an organization.
         This app developed by\nMd.Appel Mahmud Akib\nMd. Ashraful Bhuiyan.
     </string>
+    <string name="rulestext">Eligibilities--->\n\n
+1. Any donor, who is healthy, fit and not suffering from any transmittable diseases can donate blood.
+Donor must be 18 -60 years age and having a minimum weight of 50Kg can donate blood.\n\n
+2. Donor’s Hemoglobin level is 12.5% minimum.\n\n
+3. A donor can again donate blood after 3 months of your last donation of blood.\n\n
+4. Pulse rate must be between 50 to 100mm without any irregularities.\n\n
+5. BP Diastolic 50 to 100 mm Hg and Systolic 100 to 180 mm Hg.\n\n
+6. Body temperature should be normal and oral temperature should not exceed 37.5 degree Celsius.\n\n
+
+        \n\nNon-Eligibilities--->\n\n
+
+1. Donors should not suffer from Cardiac arrest, hypertension, kidney alignments, epilepsy or diabetics.\n\n
+2. Ladies with a bad miscarriage should avoid donating blood for the next 6 months.\n\n
+3. If donor already donated blood or have been treated for malaria within the last three months.\n\n
+4. If donor undergone any immunization within the past one month.\n\n
+5. If donor consumed alcohol within the last 24 hours.\n\n
+6. If you are HIV+.\n\n
+7. If donor had a dental work for next 24 hours and wait for one month if donor had a major dental procedure.\n\n
+
+    \n\nPreparation--->\n\n
+
+1. Prepare yourself by having enough fruit juice and water in the night and morning before you donate blood.\n\n
+2. Avoid donating blood in empty stomach.\n\n
+        3. Eat three hours before you donate blood. Avoid fatty foods.
+        4. Eat    food which is rich in iron such as whole grains, eggs, and beef, and spinach, leafy vegetables, orange and    citrus.\n\n
+5. Don’t consume Alcohol or caffeine beverages before donating blood.\n\n
+6. Avoid donating blood for 6 months if you had any major surgery.\n\n
+
+        \n\nPost Donation Care--->\n\n
+
+1. Have some rest 5 to 20 minutes after donation. Do not drive after donation of blood.\n\n
+ 2. Have some snacks and juice with high sugar content which will help to rejuvenate the blood sugar back    up.\n\n
+ 3. Have a good meal with high protein content such as Chicken, Beef etc,.\n\n
+ 4. Do not consume Alcohol for 8 hours after donation of blood.\n\n
+ 5. Avoid going for a heavy body works such as gym, dancing, running etc at least for next one day.\n\n
+
+        \n\nHow to Relieve--->\n\n
+
+While you are being needled to take blood, relax to the maximum, have a deep breath. There will be little pain or no pain. Try to distract yourself from the process by having a chewing gum. Listen to some music or watch some entertaining TV program.
+    </string>
 </resources>

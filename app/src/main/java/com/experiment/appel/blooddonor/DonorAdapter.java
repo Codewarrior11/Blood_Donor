@@ -1,7 +1,10 @@
 package com.experiment.appel.blooddonor;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -34,7 +37,7 @@ public class DonorAdapter extends ArrayAdapter<Donor>{
 
     @NonNull
     @Override
-    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+    public View getView(final int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         final Donor donor=dnl.get(position);
 
         ViewHolder viewHolder;
@@ -65,8 +68,19 @@ public class DonorAdapter extends ArrayAdapter<Donor>{
             }
         });
 
+        viewHolder.profileView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(context,Account.class);
+                intent.putExtra("phone",donor.getPhoneNumber());
+                intent.putExtra("position",position);
+                context.startActivity(intent);
+            }
+        });
+
         return convertView;
     }
+    
 
     private static class ViewHolder{
         TextView bloodgroup,name,address;

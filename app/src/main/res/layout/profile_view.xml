@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="#212121"
+    >
+
+    <TextView
+        android:id="@+id/bloodGroup"
+        android:layout_width="70dp"
+        android:layout_height="62dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:textColor="#f00"
+        android:textSize="30sp"
+        android:text="O+" />
+
+    <TextView
+        android:id="@+id/profileName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="128dp"
+        android:text="Appel Mahmud Akib"
+        android:textColor="#f5f5f5"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="168dp"
+        android:gravity="center"
+        android:text="maddhya ajompur,Uttara,Dhaka-1230"
+        android:textColor="#f5f5f5"
+        android:textSize="22sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="Email: "
+        android:textColor="#f5f5f5"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="225dp"
+        android:gravity="center"
+        android:text="Appelmahmud74@gmail.com"
+        android:textColor="#f5f5f5"
+        android:textSize="22sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="169dp"
+        android:gravity="center"
+        android:text="Phone: "
+        android:textColor="#f5f5f5"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="129dp"
+        android:gravity="center"
+        android:text="01719717528"
+        android:textColor="#f5f5f5"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/donationDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="77dp"
+        android:gravity="center"
+        android:text="Last Donation: 28/07/18"
+        android:textColor="#f5f5f5"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/emailBtn"
+        android:layout_width="111dp"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@+id/bloodGroup"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="14dp"
+        android:text="Email"
+        android:textSize="22sp" />
+
+    <Button
+        android:id="@+id/callBtn"
+        android:layout_width="124dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/emailBtn"
+        android:layout_marginEnd="11dp"
+        android:text="Call"
+        android:textSize="22sp" />
+
+    <Button
+        android:id="@+id/updateBtn"
+        android:layout_width="124dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/emailBtn"
+        android:layout_marginBottom="15dp"
+        android:text="Update"
+        android:textSize="22sp" />
+
+    <Button
+        android:id="@+id/deleteBtn"
+        android:layout_width="124dp"
+        android:layout_height="50dp"
+        android:layout_alignStart="@+id/callBtn"
+        android:layout_alignTop="@+id/updateBtn"
+        android:text="Delete"
+        android:textSize="22sp" />
+
+
+</RelativeLayout>
