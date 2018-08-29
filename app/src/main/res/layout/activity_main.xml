@@ -9,13 +9,13 @@
 
     <LinearLayout
         android:id="@+id/view1"
-        android:onClick="findDonor"
-        android:layout_width="100dp"
+        android:layout_width="115dp"
         android:layout_height="110dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignTop="@+id/view2"
-        android:layout_marginStart="21dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/view5"
+        android:layout_marginTop="217dp"
         android:background="@drawable/custom_ripple"
+        android:onClick="findDonor"
         android:orientation="vertical">
 
         <ImageView
@@ -36,43 +36,14 @@
 
 
     <LinearLayout
-        android:id="@+id/view2"
-        android:onClick="postRequ"
-        android:layout_width="100dp"
-        android:layout_height="110dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="206dp"
-        android:background="@drawable/custom_ripple"
-        android:orientation="vertical">
-
-        <ImageView
-            android:id="@+id/requestDonor"
-
-            android:layout_width="match_parent"
-            android:layout_height="69dp"
-            android:padding="5dp"
-            android:scaleType="center"
-            android:src="@drawable/request" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:gravity="center"
-            android:text="Post Req." />
-
-    </LinearLayout>
-
-
-    <LinearLayout
         android:id="@+id/view3"
-        android:onClick="addDonor"
-        android:layout_width="100dp"
+        android:layout_width="116dp"
         android:layout_height="110dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignTop="@+id/view2"
-        android:layout_marginEnd="17dp"
+        android:layout_alignTop="@+id/view1"
+        android:layout_marginStart="-16dp"
+        android:layout_toEndOf="@+id/imageView2"
         android:background="@drawable/custom_ripple"
+        android:onClick="addDonor"
         android:orientation="vertical">
 
         <ImageView
@@ -94,41 +65,14 @@
 
 
     <LinearLayout
-        android:id="@+id/view4"
-        android:onClick="myAccount"
-        android:layout_width="100dp"
-        android:layout_height="110dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/view1"
-        android:layout_marginBottom="117dp"
-        android:background="@drawable/custom_ripple"
-        android:orientation="vertical">
-
-        <ImageView
-            android:id="@+id/signupDonor"
-            android:layout_width="match_parent"
-            android:layout_height="69dp"
-            android:padding="5dp"
-            android:scaleType="center"
-            android:src="@drawable/account" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="15dp"
-            android:gravity="center"
-            android:text="My Account" />
-
-    </LinearLayout>
-
-
-    <LinearLayout
         android:id="@+id/view5"
-        android:onClick="information"
-        android:layout_width="100dp"
+        android:layout_width="117dp"
         android:layout_height="110dp"
-        android:layout_alignTop="@+id/view4"
-        android:layout_centerHorizontal="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/view6"
+        android:layout_marginStart="57dp"
         android:background="@drawable/custom_ripple"
+        android:onClick="information"
         android:orientation="vertical">
 
         <ImageView
@@ -151,12 +95,13 @@
 
     <LinearLayout
         android:id="@+id/view6"
-        android:onClick="aboutUs"
-        android:layout_width="100dp"
+        android:layout_width="117dp"
         android:layout_height="110dp"
+        android:layout_alignParentBottom="true"
         android:layout_alignStart="@+id/view3"
-        android:layout_alignTop="@+id/view4"
+        android:layout_marginBottom="95dp"
         android:background="@drawable/custom_ripple"
+        android:onClick="aboutUs"
         android:orientation="vertical">
 
         <ImageView

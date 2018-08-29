@@ -25,9 +25,6 @@
         <activity android:name=".AddDonor"
             android:label="Add New Donor"
             />
-        <activity android:name=".PostRequest"
-            android:label="Post a Request"
-            />
         <activity android:name=".AboutUs"
             android:label="About us"
             />

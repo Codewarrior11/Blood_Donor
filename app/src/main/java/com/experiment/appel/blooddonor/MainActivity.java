@@ -19,20 +19,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void postRequ(View view) {
-
-        Intent intent=new Intent(MainActivity.this,PostRequest.class);
-        startActivity(intent);
-    }
-
     public void addDonor(View view) {
         Intent intent=new Intent(MainActivity.this,AddDonor.class);
-        startActivity(intent);
-
-    }
-
-    public void myAccount(View view) {
-        Intent intent=new Intent(MainActivity.this,Account.class);
         startActivity(intent);
 
     }
