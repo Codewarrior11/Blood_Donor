@@ -144,6 +144,9 @@ public class AddDonor extends AppCompatActivity implements AdapterView.OnItemSel
     }
 
     public void cancelReg(View view) {
+        Intent intent=new Intent(AddDonor.this,MainActivity.class);
+         startActivity(intent);
+         finish();
 
     }
 }
