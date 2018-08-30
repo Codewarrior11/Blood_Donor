@@ -1,10 +1,7 @@
 package com.experiment.appel.blooddonor;
 
-import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -63,7 +60,7 @@ public class DonorAdapter extends ArrayAdapter<Donor>{
         viewHolder.call.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + donor.getPhoneNumber()));
+                Intent intent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:" + donor.getContactNo()));
                 context.startActivity(intent);
             }
         });
@@ -72,8 +69,14 @@ public class DonorAdapter extends ArrayAdapter<Donor>{
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(context,Account.class);
-                intent.putExtra("phone",donor.getPhoneNumber());
-                intent.putExtra("position",position);
+                intent.putExtra("dphone",donor.getContactNo());
+                intent.putExtra("dposition",donor.getId());
+                intent.putExtra("dlastdonation",donor.getLastDonationDate());
+                intent.putExtra("dname",donor.getName());
+                intent.putExtra("daddress",donor.getAddress());
+                intent.putExtra("dbgroup",donor.getBloodGroup());
+                intent.putExtra("dage",donor.getAge());
+                intent.putExtra("dgender",donor.getGender());
                 context.startActivity(intent);
             }
         });

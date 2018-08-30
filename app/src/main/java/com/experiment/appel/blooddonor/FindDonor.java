@@ -1,35 +1,24 @@
 package com.experiment.appel.blooddonor;
 
-import android.Manifest;
-import android.app.Dialog;
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
-import android.net.Uri;
-import android.support.v4.app.ActivityCompat;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SearchView;
-import android.widget.Toast;
+
+import com.experiment.appel.blooddonor.database.DonorDatabaseManager;
 
 import java.util.ArrayList;
-import java.util.Locale;
-
-import static android.content.Intent.*;
 
 public class FindDonor extends AppCompatActivity {
-    ListView listView;
-
+    ListView donorList;
+    Button callButton;
     DonorAdapter donorAdapter;
+    DonorDatabaseManager donorDatabaseManager;
 
 
     @Override
@@ -37,7 +26,20 @@ public class FindDonor extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_find_donor);
 
-        listView = findViewById(R.id.donor_list_data);
+        donorList = findViewById(R.id.donor_list_data);
+        donorDatabaseManager = new DonorDatabaseManager(this);
+
+        ArrayList<Donor> arrayList = donorDatabaseManager.getAllDonors();
+        ArrayList<Donor> listForDisplay = new ArrayList<>();
+        /*for(Donor donor:arrayList){
+            listForDisplay.add(donor);
+        }*/
+        donorAdapter = new DonorAdapter(FindDonor.this, arrayList);
+        donorList.setAdapter(donorAdapter);
+
+       /* ArrayAdapter<String>adapter=new ArrayAdapter<>(this,android.R.layout.simple_list_item_1,listForDisplay);
+        donorList.setAdapter(adapter);
+
         ArrayList<Donor> arrayList = new ArrayList<>();
         arrayList.add(new Donor("O+", "Appel Mahmud", "Sherpur,Dhaka","01719717528"));
         arrayList.add(new Donor("AB+", "Srabon Ahamed", "Dhaka","01719717529"));
@@ -55,7 +57,7 @@ public class FindDonor extends AppCompatActivity {
         donorAdapter = new DonorAdapter(FindDonor.this, arrayList);
 
         //ArrayAdapter<String>arrayAdapter=new ArrayAdapter<String>(this,R.layout.donor_view,R.id.donorname,arrayList);
-        listView.setAdapter(donorAdapter);
+        donorList.setAdapter(donorAdapter);*/
 
     }
 
@@ -78,7 +80,7 @@ public class FindDonor extends AppCompatActivity {
             public boolean onQueryTextChange(String s) {
                 if (TextUtils.isEmpty(s)){
                     donorAdapter.filter("");
-                    listView.clearTextFilter();
+                    donorList.clearTextFilter();
                 }
                 else {
                     donorAdapter.filter(s);
